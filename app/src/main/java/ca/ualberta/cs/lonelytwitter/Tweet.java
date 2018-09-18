@@ -31,4 +31,9 @@ public abstract class Tweet {
     public void setDate(Date date){
         this.date=date;
     }
+
+    @Override
+    public String toString(){
+        return this.getMessage()+"|"+this.date.toString();
+    }
 }
