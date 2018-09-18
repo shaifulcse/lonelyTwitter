@@ -5,5 +5,8 @@ package ca.ualberta.cs.lonelytwitter;
  */
 
 public class Duck extends Animal {
-
+@Override
+    public void makeSound(){
+    System.out.println("I Quack");
+    }
 }

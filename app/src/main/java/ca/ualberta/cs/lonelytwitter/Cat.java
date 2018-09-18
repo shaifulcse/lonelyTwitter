@@ -7,5 +7,8 @@ import ca.ualberta.cs.lonelytwitter.Animal;
  */
 
 public class Cat extends Animal {
-
+@Override
+    public void makeSound() {
+        System.out.println("I do meaw");
+    }
 }
