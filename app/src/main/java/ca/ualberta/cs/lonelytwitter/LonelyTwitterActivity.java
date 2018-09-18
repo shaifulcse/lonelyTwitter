@@ -6,12 +6,14 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Date;
 
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -26,7 +28,7 @@ public class LonelyTwitterActivity extends Activity {
     private ArrayList<Tweet> tweetList = new ArrayList<Tweet>();
     ArrayAdapter<Tweet> adapter;
 	/** Called when the activity is first created. */
-
+    //ArrayList<String> tweets =new ArrayList<String>();
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,9 +42,11 @@ public class LonelyTwitterActivity extends Activity {
 
 			public void onClick(View v) {
 				String text = bodyText.getText().toString();
+
 				Tweet newTweet= new ImportantTweet(text);
                 tweetList.add(newTweet);
 				saveInFile(text, new Date(System.currentTimeMillis()));
+				adapter.notifyDataSetInvalidated();
 
 			}
 		});
@@ -52,19 +56,19 @@ public class LonelyTwitterActivity extends Activity {
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
-		String[] tweets = loadFromFile();
+		//tweets = loadFromFile();
         adapter= new ArrayAdapter<Tweet>(this, R.layout.list_item, tweetList);
         oldTweetsList.setAdapter(adapter);
 	}
 
-	private String[] loadFromFile() {
-		ArrayList<Tweet> tweets = new ArrayList<Tweet>();
+	private ArrayList<String> loadFromFile() {
+		ArrayList<String> tweets = new ArrayList<String>();
 		try {
 			FileInputStream fis = openFileInput(FILENAME);
 			BufferedReader in = new BufferedReader(new InputStreamReader(fis));
 			String line = in.readLine();
 			while (line != null) {
-				tweets.add((Tweet) line);
+				tweets.add(line);
 				line = in.readLine();
 			}
 
@@ -75,7 +79,7 @@ public class LonelyTwitterActivity extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return tweets.toArray(new String[tweets.size()]);
+		return tweets;
 	}
 
 	private void saveInFile(String text, Date date) {
