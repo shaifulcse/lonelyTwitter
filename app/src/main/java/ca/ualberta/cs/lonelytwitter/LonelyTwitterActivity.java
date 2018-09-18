@@ -39,14 +39,18 @@ public class LonelyTwitterActivity extends Activity {
 		saveButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				MyClass mc=new MyClass("Shaiful", 0);
-				MyClass mc2=new MyClass("Cody");
-				mc2.setName("Zakaria");
-				Log.d("chowdhury", mc.getName());
-				Log.d("chowdhury", Integer.toString(mc.getSalary()));
-
-                Log.d("chowdhury", mc2.getName());
-                Log.d("chowdhury", Integer.toString(mc2.getSalary()));
+				Cat cat=new Cat();
+				cat.setType("Cat");
+				cat.setFood("Fish and rice");
+				System.out.println("I am a "+cat.getType());
+				System.out.println("I love "+cat.getFood());
+				cat.makeSound();
+				Duck duck =new Duck();
+				duck.setType("Duck");
+				duck.setFood("Fish");
+                System.out.println("I am a "+duck.getType());
+                System.out.println("I love "+duck.getFood());
+                duck.makeSound();
 			}
 		});
 	}
