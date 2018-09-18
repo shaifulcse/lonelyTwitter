@@ -23,8 +23,10 @@ public class LonelyTwitterActivity extends Activity {
 	private static final String FILENAME = "file.sav";
 	private EditText bodyText;
 	private ListView oldTweetsList;
-	
+    private ArrayList<Tweet> tweetList = new ArrayList<Tweet>();
+    ArrayAdapter<Tweet> adapter;
 	/** Called when the activity is first created. */
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,10 +39,10 @@ public class LonelyTwitterActivity extends Activity {
 		saveButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				setResult(RESULT_OK);
 				String text = bodyText.getText().toString();
+				Tweet newTweet= new ImportantTweet(text);
+                tweetList.add(newTweet);
 				saveInFile(text, new Date(System.currentTimeMillis()));
-				finish();
 
 			}
 		});
@@ -51,19 +53,18 @@ public class LonelyTwitterActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onStart();
 		String[] tweets = loadFromFile();
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-				R.layout.list_item, tweets);
-		oldTweetsList.setAdapter(adapter);
+        adapter= new ArrayAdapter<Tweet>(this, R.layout.list_item, tweetList);
+        oldTweetsList.setAdapter(adapter);
 	}
 
 	private String[] loadFromFile() {
-		ArrayList<String> tweets = new ArrayList<String>();
+		ArrayList<Tweet> tweets = new ArrayList<Tweet>();
 		try {
 			FileInputStream fis = openFileInput(FILENAME);
 			BufferedReader in = new BufferedReader(new InputStreamReader(fis));
 			String line = in.readLine();
 			while (line != null) {
-				tweets.add(line);
+				tweets.add((Tweet) line);
 				line = in.readLine();
 			}
 
@@ -76,7 +77,7 @@ public class LonelyTwitterActivity extends Activity {
 		}
 		return tweets.toArray(new String[tweets.size()]);
 	}
-	
+
 	private void saveInFile(String text, Date date) {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
