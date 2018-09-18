@@ -1,20 +1,8 @@
 package ca.ualberta.cs.lonelytwitter;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Date;
-
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -45,12 +33,24 @@ public class LonelyTwitterActivity extends Activity {
 				System.out.println("I am a "+cat.getType());
 				System.out.println("I love "+cat.getFood());
 				cat.makeSound();
-				Duck duck =new Duck();
-				duck.setType("Duck");
+
+				WildDuck duck =new WildDuck();
+				duck.setType("WildDuck");
 				duck.setFood("Fish");
                 System.out.println("I am a "+duck.getType());
                 System.out.println("I love "+duck.getFood());
                 duck.makeSound();
+                duck.doLike();
+                duck.length();
+
+                DomesticDuck domesticDuck =new DomesticDuck();
+                domesticDuck.setType("Domestic Duck");
+                domesticDuck.setFood("Fish and others");
+                System.out.println("I am a "+domesticDuck.getType());
+                System.out.println("I love "+domesticDuck.getFood());
+                domesticDuck.makeSound();
+                domesticDuck.doLike();
+                domesticDuck.length();
 			}
 		});
 	}
