@@ -40,9 +40,13 @@ public class LonelyTwitterActivity extends Activity {
 
 			public void onClick(View v) {
 				MyClass mc=new MyClass("Shaiful", 0);
-				Log.d("chowdhury", mc.name);
-				Log.d("chowdhury", Integer.toString(mc.salary));
+				MyClass mc2=new MyClass("Cody");
+				mc2.setName("Zakaria");
+				Log.d("chowdhury", mc.getName());
+				Log.d("chowdhury", Integer.toString(mc.getSalary()));
 
+                Log.d("chowdhury", mc2.getName());
+                Log.d("chowdhury", Integer.toString(mc2.getSalary()));
 			}
 		});
 	}
