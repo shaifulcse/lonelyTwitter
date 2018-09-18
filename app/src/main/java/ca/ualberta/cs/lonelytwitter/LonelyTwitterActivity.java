@@ -39,9 +39,7 @@ public class LonelyTwitterActivity extends Activity {
 		saveButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				MyClass mc=new MyClass();
-				mc.name="Shaiful";
-				mc.salary=0;
+				MyClass mc=new MyClass("Shaiful", 0);
 				Log.d("chowdhury", mc.name);
 				Log.d("chowdhury", Integer.toString(mc.salary));
 

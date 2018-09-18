@@ -8,4 +8,9 @@ public class MyClass {
 
 String name;
 int salary;
+
+  public MyClass(String name, int salary){
+      this.name=name;
+      this.salary=salary;
+  }
 }
