@@ -1,6 +1,7 @@
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -96,6 +97,7 @@ public class LonelyTwitterActivity extends Activity {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
 					0);
+		//	BufferedWriter write= new BufferedWriter(new OutputStreamWriter(fos));
 			OutputStreamWriter write =new OutputStreamWriter(fos);
 			Gson gson= new Gson();
 			gson.toJson(tweets,write);
