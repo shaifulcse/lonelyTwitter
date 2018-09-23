@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f8c2a7f-8239-478f-9e56-5e75a8983b6f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/ImportantTweet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/NormalTweet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/TooLongTweetException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/Tweet.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java" />
-      <change beforePath="$PROJECT_DIR$/lonelyTwitter.iml" afterPath="$PROJECT_DIR$/lonelyTwitter.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,12 +27,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LonelyTwitterActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LonelyTwitterActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding>
+                <element signature="e#1087#1270#0" expanded="true" />
+                <element signature="e#1269#1270#0" expanded="true" />
+                <element signature="e#1640#1648#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/Tweet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="e#280#281#0" expanded="true" />
                 <element signature="e#315#316#0" expanded="true" />
@@ -66,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/NormalTweet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#120#121#0" expanded="true" />
                 <element signature="e#150#151#0" expanded="true" />
@@ -77,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportantTweet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImportantTweet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/ImportantTweet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#124#125#0" expanded="true" />
                 <element signature="e#154#155#0" expanded="true" />
@@ -1873,10 +1869,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/Tweet.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/NormalTweet.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/ImportantTweet.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java" />
       </list>
     </option>
   </component>
@@ -2160,8 +2156,12 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#1087#1270#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="e#1640#1648#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2176,7 +2176,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/Tweet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="e#280#281#0" expanded="true" />
             <element signature="e#315#316#0" expanded="true" />
@@ -2191,7 +2191,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/NormalTweet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#120#121#0" expanded="true" />
             <element signature="e#150#151#0" expanded="true" />
@@ -2210,6 +2210,67 @@
             <element signature="e#154#155#0" expanded="true" />
             <element signature="e#203#204#0" expanded="true" />
             <element signature="e#230#231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/Tweet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/NormalTweet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#120#121#0" expanded="true" />
+            <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/ImportantTweet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#154#155#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/TooLongTweetException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#1087#1270#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="e#1640#1648#0" expanded="true" />
           </folding>
         </state>
       </provider>
