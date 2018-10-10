@@ -10,9 +10,12 @@ import com.searchly.jestdroid.JestDroidClient;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
+import io.searchbox.client.JestResult;
 import io.searchbox.core.DocumentResult;
 import io.searchbox.core.Index;
+import io.searchbox.core.Search;
 
 /**
  * Created by romansky on 10/20/16.
@@ -41,9 +44,30 @@ public class ElasticsearchTweetController {
         }
     }
 
-    public static ArrayList<Tweet> getTweets(){
-        setClient();
-        return null;
+    public static class GetTweetsTask extends AsyncTask<String, Void, ArrayList<Tweet>>{
+        @Override
+        //String instead of void to implement search
+        protected ArrayList<Tweet> doInBackground(String... params) {
+            setClient();
+            ArrayList<Tweet> tweets=new ArrayList<Tweet>();
+            Search search = new Search.Builder(params[0])
+                            .addIndex("shaiful-new-test")
+                            .addType("tweet")
+                    .build();
+            try {
+                JestResult result=client.execute(search);
+
+                if(result.isSucceeded()){
+                    List<NormalTweet> tweetList;
+                tweetList=result.getSourceAsObjectList(NormalTweet.class);
+                tweets.addAll(tweetList);
+                }
+
+            }catch(IOException e){}
+
+            return tweets;
+        }
+
     }
 
     private static void setClient(){

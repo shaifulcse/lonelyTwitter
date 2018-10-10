@@ -15,6 +15,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -53,6 +54,7 @@ public class LonelyTwitterActivity extends Activity {
 				Tweet newTweet = new NormalTweet(text);
 				tweetList.add(newTweet);
 				adapter.notifyDataSetChanged();
+				bodyText.setText("");
 			    new ElasticsearchTweetController.AddTweetTask().execute(newTweet);
 			}
 		});
@@ -74,8 +76,12 @@ public class LonelyTwitterActivity extends Activity {
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
-	//	loadFromFile(); // TODO replace this with elastic search
-		adapter = new ArrayAdapter<Tweet>(this,
+		try {
+            tweetList=new ElasticsearchTweetController.GetTweetsTask().execute("").get();
+        }catch(Exception e){
+            Log.d("chowdhury", "did not work");
+		}
+        adapter = new ArrayAdapter<Tweet>(this,
 				R.layout.list_item, tweetList);
 		oldTweetsList.setAdapter(adapter);
 	}
