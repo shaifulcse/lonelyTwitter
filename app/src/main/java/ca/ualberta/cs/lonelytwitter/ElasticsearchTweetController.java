@@ -70,6 +70,38 @@ public class ElasticsearchTweetController {
 
     }
 
+    public static class GetFilteredTweetsTask extends AsyncTask<String, Void, ArrayList<Tweet>>{
+        @Override
+        //String instead of void to implement search
+        protected ArrayList<Tweet> doInBackground(String... params) {
+            setClient();
+            ArrayList<Tweet> tweets=new ArrayList<Tweet>();
+            //Log.d("chowdhury",params[0]);
+            String searchString="{ \"query\": { \"term\" : { \"message\" : \""
+                    + params[0] + "\"}}}";
+            Search search = new Search.Builder(searchString)
+                    .addIndex("shaiful-new-test")
+                    .addType("tweet")
+                    .build();
+            try {
+                JestResult result=client.execute(search);
+
+                if(result.isSucceeded()){
+                //    Log.d("chowdhury","hit");
+                    List<NormalTweet> tweetList;
+                    tweetList=result.getSourceAsObjectList(NormalTweet.class);
+                    tweets.addAll(tweetList);
+                }
+
+            }catch(IOException e){
+               // Log.d("chowdhury", "did not hit");
+            }
+
+            return tweets;
+        }
+
+    }
+
     private static void setClient(){
         if(client==null){
 

@@ -23,7 +23,7 @@ public abstract class Tweet implements Tweetable {
 
     @Override
     public String toString(){
-        return message;
+        return date.toString()+" | "+message;
     }
 
     public abstract Boolean isImportant();

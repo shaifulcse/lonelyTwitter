@@ -64,8 +64,22 @@ public class LonelyTwitterActivity extends Activity {
 			public void onClick(View v) {
 				setResult(RESULT_OK);
 				tweetList.clear();
-				deleteFile(FILENAME);  // TODO deprecate this button
-				adapter.notifyDataSetChanged();
+                try {
+                   ArrayList<Tweet> tmpTweetList = new ArrayList<Tweet>();
+                    tmpTweetList=new
+                            ElasticsearchTweetController.
+                            GetFilteredTweetsTask().execute(bodyText.getText()
+                            .toString()).get();
+                    tweetList.addAll(tmpTweetList);
+                }catch(Exception e){
+                    Log.d("chowdhury", "did not work");
+                }
+
+
+                    adapter.notifyDataSetChanged();
+
+
+
 			}
 		});
 
